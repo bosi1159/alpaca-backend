@@ -14,12 +14,10 @@ const alpaca = new Alpaca({
   paper: true,
 });
 
-// Root route to confirm server is working
 app.get("/", (req, res) => {
   res.send("Alpaca backend is running ✅");
 });
 
-// Endpoint to get Alpaca account info
 app.get("/account", async (req, res) => {
   try {
     const account = await alpaca.getAccount();
